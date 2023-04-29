@@ -10,6 +10,6 @@ public interface ProductoService {
 
     List<Producto> getAll();
 
-    Producto get(String id);
+    Producto get(Integer id);
 
 }

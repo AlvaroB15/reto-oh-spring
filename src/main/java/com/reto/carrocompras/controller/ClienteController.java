@@ -28,7 +28,7 @@ public class ClienteController {
     }
 
     @GetMapping("/{clienteId}")
-    public ResponseEntity<Cliente> obtenerCliente(@PathVariable String clienteId) {
+    public ResponseEntity<Cliente> obtenerCliente(@PathVariable Integer clienteId) {
         return ResponseEntity.status(HttpStatus.CREATED).body(clienteService.get(clienteId));
     }
 

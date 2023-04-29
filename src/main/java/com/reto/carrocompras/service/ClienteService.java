@@ -10,6 +10,6 @@ public interface ClienteService {
 
     List<Cliente> getAll();
 
-    Cliente get(String id);
+    Cliente get(Integer id);
 
 }

@@ -10,6 +10,6 @@ public interface VentaService {
 
     List<Venta> getAll();
 
-    Venta get(String id);
+    Venta get(Integer id);
 
 }

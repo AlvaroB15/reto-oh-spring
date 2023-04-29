@@ -27,15 +27,16 @@ public class DetalleVenta {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
-    @JoinColumn(name = "id_producto", nullable = false)
+//    @JoinColumn(name = "id_producto", nullable = false)
+    @JoinColumn(name = "id_producto")
     // Para no serializar
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Producto producto;
 
-
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
-    @JoinColumn(name = "id_venta", nullable = false)
+//    @JoinColumn(name = "id_venta", nullable = false)
+    @JoinColumn(name = "id_venta")
     // Para no serializar
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Venta venta;

@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class ClienteServiceImpl implements ClienteService {
@@ -18,8 +17,6 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public Cliente create(Cliente cliente) {
-//        String clienteId = UUID.randomUUID().toString();
-//        cliente.setId(clienteId);
         return clienteRepository.save(cliente);
     }
 
@@ -29,7 +26,7 @@ public class ClienteServiceImpl implements ClienteService {
     }
 
     @Override
-    public Cliente get(String id) {
+    public Cliente get(Integer id) {
         return clienteRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Cliente no encontrado con el ID: " + id));
     }
 }

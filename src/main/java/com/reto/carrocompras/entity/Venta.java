@@ -26,12 +26,12 @@ public class Venta {
     @Column(name = "fecha", nullable = false)
     private Date fecha;
 
-
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JsonIgnore
-    @JoinColumn(name = "id_cliente", nullable = false)
+//    @JoinColumn(name = "id_cliente", nullable = false)
+    @JoinColumn(name = "id_cliente")
     // Para no serializar
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+//    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Cliente cliente;
 
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL)
