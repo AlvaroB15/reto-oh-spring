@@ -1,5 +1,6 @@
 package com.reto.carrocompras.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
@@ -26,7 +27,7 @@ public class DetalleVenta {
     private int cantidad;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JsonIgnore
+    @JsonBackReference
 //    @JoinColumn(name = "id_producto", nullable = false)
     @JoinColumn(name = "id_producto")
     // Para no serializar
@@ -34,7 +35,7 @@ public class DetalleVenta {
     private Producto producto;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JsonIgnore
+    @JsonBackReference
 //    @JoinColumn(name = "id_venta", nullable = false)
     @JoinColumn(name = "id_venta")
     // Para no serializar
